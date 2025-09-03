@@ -2,7 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getHumanChoice() {
-    let inputHuman = prompt("choose rock, paper or scissors");
+    let inputHuman = prompt("choose rock, paper or scissors").toLowerCase();
     console.log(inputHuman)
     return inputHuman;
 }
