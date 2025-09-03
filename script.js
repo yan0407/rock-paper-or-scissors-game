@@ -1,3 +1,9 @@
+function getHumanChoice() {
+    let inputHuman = prompt("choose rock, paper or scissors");
+    console.log(inputHuman)
+    return inputHuman;
+}
+
 function getComputerChoice() {
     let randomChoice = Math.floor(Math.random() * 6) + 1;
 
