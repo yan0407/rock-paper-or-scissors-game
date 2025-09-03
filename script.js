@@ -17,3 +17,22 @@ function getComputerChoice() {
         return "scissors"
     }
 }
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log(`empate`)
+    } else if (
+        humanChoice === "rock" && computerChoice === "scissors" ||
+        humanChoice === "paper" && computerChoice === "rock" ||
+        humanChoice === "scissors" && computerChoice === "paper"
+    ) {
+        console.log(`You wont! ${humanChoice} beats ${computerChoice}`)
+    } else {
+        console.log(`You lost! ${computerChoice} beats ${humanChoice}.`)
+    }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection)
