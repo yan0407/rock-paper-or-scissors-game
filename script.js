@@ -11,10 +11,10 @@ function getComputerChoice() {
     let randomChoice = Math.floor(Math.random() * 6) + 1;
 
     if (randomChoice === 1 || randomChoice === 4) {
-        console.log("Rock")
+        console.log("rock")
     } else if (randomChoice === 2 || randomChoice === 5) {
-        console.log("Paper")
+        console.log("paper")
     } else {
-        console.log("Scissors")
+        console.log("scissors")
     }
 }
