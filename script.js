@@ -4,7 +4,7 @@ let computerScore = 0;
 function getHumanChoice() {
     let inputHuman = prompt("choose rock, paper or scissors").toLowerCase();
     while (inputHuman !== "rock" && inputHuman !== "paper" && inputHuman !== "scissors") {
-        inputHuman = prompt("Invalid input. Enter rock, paper, scissors").toLowerCase();
+        inputHuman = prompt("Invalid input. choose rock, paper or scissors").toLowerCase();
     }
     return inputHuman;
 }
@@ -29,7 +29,7 @@ function playRound(humanChoice, computerChoice) {
         humanChoice === "paper" && computerChoice === "rock" ||
         humanChoice === "scissors" && computerChoice === "paper"
     ) {
-        console.log(`You wont! ${humanChoice} beats ${computerChoice}.`)
+        console.log(`You won! ${humanChoice} beats ${computerChoice}.`)
         humanScore++;
     } else {
         console.log(`You lost! ${computerChoice} beats ${humanChoice}.`);
