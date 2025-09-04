@@ -3,6 +3,9 @@ let computerScore = 0;
 
 function getHumanChoice() {
     let inputHuman = prompt("choose rock, paper or scissors").toLowerCase();
+    while (inputHuman !== "rock" && inputHuman !== "paper" && inputHuman !== "scissors") {
+        inputHuman = prompt("Invalid input. Enter rock, paper, scissors").toLowerCase();
+    }
     return inputHuman;
 }
 
