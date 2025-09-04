@@ -27,12 +27,28 @@ function playRound(humanChoice, computerChoice) {
         humanChoice === "scissors" && computerChoice === "paper"
     ) {
         console.log(`You wont! ${humanChoice} beats ${computerChoice}.`)
+        humanScore++;
     } else {
         console.log(`You lost! ${computerChoice} beats ${humanChoice}.`);
+        computerScore++;
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+    }
+
+    if (humanScore === computerScore) {
+        console.log(`The game ended in a tie ${humanScore} at ${computerScore}`)
+    } else if (humanScore > computerScore) {
+        console.log(`Congratulations! You won the game ${humanScore} at ${computerScore}`)
+    } else {
+        console.log(`Sorry, you lost the game ${computerScore} at ${humanScore}`)
+    }
+}
+
+playGame()
