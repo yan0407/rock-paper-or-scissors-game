@@ -10,11 +10,11 @@ function getComputerChoice() {
     let randomChoice = Math.floor(Math.random() * 6) + 1;
 
     if (randomChoice === 1 || randomChoice === 4) {
-        return "rock"
+        return "rock";
     } else if (randomChoice === 2 || randomChoice === 5) {
-        return "paper"
+        return "paper";
     } else {
-        return "scissors"
+        return "scissors";
     }
 }
 
@@ -26,13 +26,13 @@ function playRound(humanChoice, computerChoice) {
         humanChoice === "paper" && computerChoice === "rock" ||
         humanChoice === "scissors" && computerChoice === "paper"
     ) {
-        console.log(`You wont! ${humanChoice} beats ${computerChoice}`)
+        console.log(`You wont! ${humanChoice} beats ${computerChoice}.`)
     } else {
-        console.log(`You lost! ${computerChoice} beats ${humanChoice}.`)
+        console.log(`You lost! ${computerChoice} beats ${humanChoice}.`);
     }
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection)
+playRound(humanSelection, computerSelection);
