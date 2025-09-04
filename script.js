@@ -23,7 +23,7 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-        console.log(`empate`)
+        console.log(`Tie! Both chose ${humanChoice}.`)
     } else if (
         humanChoice === "rock" && computerChoice === "scissors" ||
         humanChoice === "paper" && computerChoice === "rock" ||
@@ -39,6 +39,9 @@ function playRound(humanChoice, computerChoice) {
 
 
 function playGame() {
+    humanScore = 0;
+    computerScore = 0;
+    
     for (let i = 0; i < 5; i++) {
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
